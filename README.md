@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <td> <img src="assets/animation_obama.gif" alt="1" width=500px height=170px ></td>
-    <td> <img src="assets/animation_queen.gif" alt="2" width=500px height=170px ></td>
-    <td> <img src="assets/animation_tom.gif" alt="3" width=500px height=170px ></td>
+    <td> <img src="assets/animation_obama.gif" alt="1" width=180 height=180px ></td>
+    <td> <img src="assets/animation_queen.gif" alt="2" width=180 height=180px ></td>
+    <td> <img src="assets/animation_tom.gif" alt="3" width=180 height=180px ></td>
    </tr> 
 </table>
 <table>
