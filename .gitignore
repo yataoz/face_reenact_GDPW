@@ -127,3 +127,20 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+tmp/
+checkpoints/
+data/
+train_log/
+*.mp4
+*.zip
+*.pth
+FLAME/generic_model.pkl
+!Fit-DECA/data/
+Fit-DECA/data/FLAME2020/*
+Fit-DECA/data/generic_model.pkl
+Fit-DECA/data/male_model.pkl
+Fit-DECA/data/female_model.pkl
+Fit-DECA/data/deca_model.tar
+Fit-DECA/data/FLAME2020.zip
