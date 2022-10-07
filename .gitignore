@@ -134,6 +134,8 @@ checkpoints/
 data/
 train_log/
 *.mp4
+*.jpg
+*.png
 *.zip
 *.pth
 FLAME/generic_model.pkl

@@ -16,7 +16,7 @@
 
 This is the offical pytorch implementation of GDPW (**G**eometry **D**riven **P**rogressive **W**arping for One-Shot Face Animation, BMVC 2022).
 
-GDPW uses 3D face geometry to guidance the facial motion transfer. GDPW can be used for face reneactment and face editing (including facial shape, expression and pose).
+GDPW uses 3D face geometry to guidance the facial motion transfer. GDPW can be used for face reneactment and face editing (including facial shape, expression and pose). Please refer to our [paper](https://arxiv.org/abs/2210.02391) for more details.
 
 
 ## Getting Started
@@ -55,7 +55,7 @@ GDPW uses 3D face geometry to guidance the facial motion transfer. GDPW can be u
         ```bash
         docker commit <container_id> gltorch:face_reenact_GDPW
         ```
-        gltorch:face_reenact_GDPW is the new image name.
+        `gltorch:face_reenact_GDPW` is the new image name.
 
 ### Data and model preparation:
 1. Test demo requires online 3DMM fitting, for which we rely on [DECA](https://github.com/YadiraF/DECA). The `Fit-DECA/decalib` folder contains a modified version of the DECA fitter. 
@@ -67,7 +67,7 @@ GDPW uses 3D face geometry to guidance the facial motion transfer. GDPW can be u
         cd ..
         ```
 2. Download sample test/train data.
-    - Download from goodle drive. TO DO: add link
+    - Download from goodle drive. (TO DO: we will add the link soon)
     - Place the `./data` and `./checkpoints` folders right under the root directory of face_reenact_GDPW.
         
 ### Run face reenactment demo:
@@ -103,6 +103,11 @@ GDPW uses 3D face geometry to guidance the facial motion transfer. GDPW can be u
         - Change the global head pose by supplying `global_pose <yaw, pitch or roll> <angle>` in the terminal prompt. E.g. `global_pose yaw -10` will set the yaw angle of global head pose to -10 degrees.
         - Change the jaw pose by supplying `jaw_pose <yaw, pitch or roll> <angle>` in the terminal prompt. E.g. `jaw_pose pitch 5` will set the pitch angle of jaw pose to 5 degrees. 
         - Change the camera by supplying `cam <scale, tx or ty> <value>` in the terminal prompt. E.g. `cam scale 10` will set the camera scale to 10 and `cam tx -2` will set the camera horizontal shift to -2. 
+        - Multiple changes can be applied all at once in a single terminal prompt. For example:
+            ```
+            shape 0 1.5 exp 0 -1 global_pose yaw -10 jaw_pose pitch 5 cam scale 10
+            ```
+        - Use `reset` in the terminal prompt to undo all changes/edits.
 
 ### Train the model:
 We do not provide the full training data here due to the large size of the VoxCeleb dataset. We provide several pre-processed training samples in `data/sample_train` (which you should have already downloaded from google drive). What we do in pre-processing is running the DECA fitter on the face images and save the FLAME mesh vertices that are projected to image space.
