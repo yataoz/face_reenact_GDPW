@@ -66,8 +66,8 @@ GDPW uses 3D face geometry to guidance the facial motion transfer. GDPW can be u
         bash fetch_data.sh
         cd ..
         ```
-2. Download sample test/train data.
-    - Download from goodle drive. (TO DO: we will add the link soon)
+2. Download pre-trained models and sample test/train data.
+    - Download from [goodle drive](https://drive.google.com/drive/folders/149O2EpAh_mOW1s7INnKaa3BrV0Zv00D6?usp=share_link).
     - Place the `./data` and `./checkpoints` folders right under the root directory of face_reenact_GDPW.
         
 ### Run face reenactment demo:
